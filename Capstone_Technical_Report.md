@@ -38,20 +38,41 @@ The primary task in feature engineering for time series data were taken in the f
 3. Create a function to shift the predictor by the number of months we wish to predict forward. 
   - For example 6 months of portland monthly price data will be used to predict 2 months ahead. 
 
-### Modeling
-The begin the modeling process 6 months of Portland median housing price data was predict 1 month ahead as the baseline model. The following models were used to determine the optimal choice for moving forward: 
+### Modeling Table of Contents: 
+The median house price predictive model was developed by going through the following procedures: 
+1. Compare models Linear Regression, Neural Network and Long Short Term Memory Recurrent Neural Network
+2. Use San Francisco median house price to check transferability of model 
+3. Increase inputs using 3, 6, 12, 18 months of data for prediction (Does more data improve the MSE?)
+4. Check the limit of predictive capacity 1, 3, 6, 12 month look ahead (How far can the model accurately predict into the future?)
+5. Add feature inputs from interest rates, unemployment, CPI to prediction sale price
+6. Create model that includes inputs from previous months and added features to predict sale price (Is this the optimal model?)
+
+### Model: 
+1. Compare models Linear Regression, Neural Network and Long Short Term Memory Recurrent Neural Network
+The baseline model used 6 months of Portland median housing price data to predict 1 month ahead. The following models were used to determine the optimal choice for moving forward: 
 - Linear Regression
 - Neural Network
 - Long Short Term Memory(LSTM) - Recurrent Neural Network(RNN)
 
 After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. Mean squared error is the sum of the squared difference between the actual portland house sale price minus the predicted Portland house sale price divided by the number of predictions. The square root of the mean squared error was taken to find the dollar difference between the predicted and real portland median house sale price. 
 
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png "MSE")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png "MSE" width="200" height="200")
 
 Model Results: 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Model%20Comparison%20MSE.png "Model Comparison")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Linear%20Regression%206%20month.jpg "Linear Regression 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Neural%20Network%206%20month.jpg "Neural Network 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/LSTM%206%20month.jpg "LSTM 6 month")
 
-Long Short Term Memory(LSTM) had the lowest error for the baseline 1 month ahead prediction using previous 6 months of Portland housing price data. LSTM is a good model for time series data because it takes into account sequence dependence from the input variables. Therefore,   
+Long Short Term Memory(LSTM) had the lowest error for the baseline 1 month ahead prediction using previous 6 months of Portland housing price data. LSTM is a good model for time series data because it takes into account sequence dependence from the input variables. Also, observing the plot of the 6 month LSTM, the red prediction line smooths out the volatility and shows a better prediction of the real Portland median house sale price. 
+
+
+
+
+
+
+
+
 
 [1]: https://www.zillow.com/research/data/
 [2]: https://fred.stlouisfed.org
