@@ -28,7 +28,7 @@ For reference, the Consumer Price Index for All Urban Consumers: All Items (CPIA
 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/CPI%20Rate.jpg "CPI Rate")
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Unemployment%20Rate.jpg "Unemployment Rate")
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Federal%20Reserve%20Funds%20Rate.jpg "Fed Feunds Rate")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Federal%20Reserve%20Funds%20Rate.jpg "Fed Funds Rate")
 
 ### Feature Engineering:
 The primary task in feature engineering for time series data were taken in the following order: 
@@ -42,14 +42,16 @@ The primary task in feature engineering for time series data were taken in the f
 The begin the modeling process 6 months of Portland median housing price data was predict 1 month ahead as the baseline model. The following models were used to determine the optimal choice for moving forward: 
 - Linear Regression
 - Neural Network
-- Long Short Term Memory - Recurrent Neural Network 
+- Long Short Term Memory(LSTM) - Recurrent Neural Network(RNN)
 
-After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. 
-Mean Squared Error = $\frac{1}{n}\sum_{t=1}^{n} e_t^2$
+After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. Mean squared error is the sum of the squared difference between the actual portland house sale price minus the predicted Portland house sale price divided by the number of predictions. The square root of the mean squared error was taken to find the dollar difference between the predicted and real portland median house sale price. 
+
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png "MSE")
 
 Model Results: 
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Model%20Comparison%20MSE.png "Model Comparison")
 
-
+Long Short Term Memory(LSTM) had the lowest error for the baseline 1 month ahead prediction using previous 6 months of Portland housing price data. LSTM is a good model for time series data because it takes into account sequence dependence from the input variables. Therefore,   
 
 [1]: https://www.zillow.com/research/data/
 [2]: https://fred.stlouisfed.org
