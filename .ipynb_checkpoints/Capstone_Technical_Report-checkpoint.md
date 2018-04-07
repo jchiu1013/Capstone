@@ -54,9 +54,9 @@ The baseline model used 6 months of Portland median housing price data to predic
 - Neural Network
 - Long Short Term Memory(LSTM) - Recurrent Neural Network(RNN)
 
-Keras LSTM Architecture: 
+Keras LSTM Architecture[4]: Below is a sample image of the architecture for a LSTM recurrent neural network. A recurrent neural network is a neural network that attempts to model time or sequence dependent data such as time series data in stock price or natural language processing. At each time step of the network the previous data is fed into the next step to maintain memory of the information. This helps with the vanishing gradient problem in a normal neural network where past data moves asymptotically toward zero. This means weight in previous layers won't be changed significantly and the model will not learn long term dependencies. The LSTM model solves this problem and as a result is a good model for use with time series data. 
 
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Keras-LSTM-tutorial-architecture.png "LSTM Architecture") [4]
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Keras-LSTM-tutorial-architecture.png "LSTM Architecture") 
 
 After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. Mean squared error is the sum of the squared difference between the actual portland house sale price minus the predicted Portland house sale price divided by the number of predictions. The square root of the mean squared error was taken to find the dollar difference between the predicted and real portland median house sale price. 
 
@@ -110,29 +110,34 @@ Model Results:
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/FFR-Portland%2018%20Months%201%20Month%20Prediction.png "FFR 18 month Portland 1 month prediction")
 
 6. Create model that includes inputs from previous months and added features to predict sale price (Is this the optimal model?)
-
 Model Results: 
+- In the following model 18 months of Portland median sale price data, CPI data and unemployment data were all used to predict Portland median house sale price 1 month ahead. In the first graph below, the MSE is plotted for the CPI, Unemployment rate, Portland 18 month and the combined model with all three for comparison. The combined model with CPI, unemployment rate and 18 month Portland price does the best with an incremental increase in MSE compared to the 18 month of Portland price prediction alone. The second graph plots the predicted Portland median house sale price from the combined model against the real price. After observing the results it is clear that the best input for predicting future prices is the past price with slight improvement from the additional information in the CPI and unemployment rates. 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Added%20Features%20Portland%20Model%20Accuracy.png "Added features model accuracy")
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Portland%20LSTM%20Model%20-%20Unemployment%2C%20CPI%2C%20Lag%2012%20months%20-%20predict%201%20month%20ahead.png "Combined Model")
 
 ### Conclusion: 
-- LSTM 18 months best model for predicting prices
-- More months of data help, but limited by correlation
-- Predicting more months ahead widens error
-- Adding features helps reduce error, but not significantly
+- LSTM 18 months with the added features was the best model for predicting Portland house sale prices. 
+- The more months of data provided help to improve the accuracy of the prediction, but this is limited by correlation of past prices to the present price.
+- Predicting more months ahead widens error, so it is important to be more discerning when using the model to predict further into the future.
+- Adding features helps to reduce error, but not significantly. 
+    - One topic that may be relevant to discuss is the efficient market hypothesis. Efficient market hypothesis is a theory in financial economics that states that asset prices fully reflect all available information.[5] In this case prices reflect a large amount of the information needed to accurately forecast the future median sale price of a house. There is minimal returns to adding more features. 
 
 ### Application: 
 
 - Homebuyer: 
   - Best time to buy? 
+      - The predictive model can be used to inform a homebuyer of future trends in the market and help them decide the best time to buy. 
   - Best price to bid? 
+       - The predictive model can also be used to determine the price to bid for a home, through predictive modeling into the future and adjusting bids by the expected percentage change. 
 - Renter: 
   - Best time to lock in a rental contract? 
+      - As a renter, the model can be used to predict trends in the price of houses or rental prices. This can be useful when looking to sign a new rental contract and negotiating terms. 
 - Government: 
-  - There is a upward trend in prices. 
-  - Increase the supply of homes? 
+  - What is the trend in prices? Should we increase the supply of homes? 
+      - The model can be used to predict trends in house prices. The additional information can help government bodies make more informed decisions. For example in the case of policy, should the government increase the supply of homes if the market is getting too hot? Should they take action to offer affordable forms of housing? 
 
 [1]: https://www.zillow.com/research/data/
 [2]: https://fred.stlouisfed.org
 [3]: https://fred.stlouisfed.org/series/CPIAUCSL
 [4]: http://adventuresinmachinelearning.com/keras-lstm-tutorial/
+[5]: https://en.wikipedia.org/wiki/Efficient-market_hypothesis
