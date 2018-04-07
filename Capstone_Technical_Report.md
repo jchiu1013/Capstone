@@ -73,6 +73,9 @@ San Francisco 6 month input data was used as a feature to predict the San Franci
 
 3. Increase inputs using 3, 6, 12, 18 months of data for prediction (Does more data improve the MSE?)
 
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
 
 
 
