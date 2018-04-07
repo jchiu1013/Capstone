@@ -57,18 +57,21 @@ The baseline model used 6 months of Portland median housing price data to predic
 After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. Mean squared error is the sum of the squared difference between the actual portland house sale price minus the predicted Portland house sale price divided by the number of predictions. The square root of the mean squared error was taken to find the dollar difference between the predicted and real portland median house sale price. 
 
 MSE = $\frac{1}{n}\sum_{t=1}^{n} e_t^2$
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png "MSE")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png "MSE" height="24px" width="48px")
 
 Model Results: 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Model%20Comparison%20MSE.png "Model Comparison")
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Linear%20Regression%206%20month.jpg "Linear Regression 6 month")
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Neural%20Network%206%20month.jpg "Neural Network 6 month")
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/LSTM%206%20month.jpg "LSTM 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Linear%20Regression%206%20month.jpg "Portland Linear Regression 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Neural%20Network%206%20month.jpg "Portland Neural Network 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/LSTM%206%20month.jpg "Portland LSTM 6 month")
 
-Long Short Term Memory(LSTM) had the lowest error for the baseline 1 month ahead prediction using previous 6 months of Portland housing price data. LSTM is a good model for time series data because it takes into account sequence dependence from the input variables. Also, observing the plot of the 6 month LSTM, the red prediction line smooths out the volatility and shows a better prediction of the real Portland median house sale price. 
+Long Short Term Memory(LSTM) had the lowest error for the baseline 1 month ahead prediction using previous 6 months of Portland housing price data. LSTM is a good model for time series data because it takes into account sequence dependence from the input variables. Also, observing the plot of the 6 month LSTM, the red prediction line smooths out the volatility and shows a good prediction of the real Portland median house sale price. 
 
+2. Use San Francisco median house price to check transferability of model 
+San Francisco 6 month input data was used as a feature to predict the San Francisco median house price 1 month ahead. Below reveal the result of the prediction. The red predicted line plotted with the black real San Francisco median house price reveals an accurate model with an error of $3464.32.
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
 
-
+3. Increase inputs using 3, 6, 12, 18 months of data for prediction (Does more data improve the MSE?)
 
 
 
