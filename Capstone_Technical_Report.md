@@ -56,15 +56,12 @@ The baseline model used 6 months of Portland median housing price data to predic
 
 Keras LSTM Architecture: 
 
-https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Keras-LSTM-tutorial-architecture.png
-
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Keras-LSTM-tutorial-architecture.png "LSTM Architecture") [4]
 
 After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. Mean squared error is the sum of the squared difference between the actual portland house sale price minus the predicted Portland house sale price divided by the number of predictions. The square root of the mean squared error was taken to find the dollar difference between the predicted and real portland median house sale price. 
 
-http://adventuresinmachinelearning.com/keras-lstm-tutorial/
-
 MSE = $\frac{1}{n}\sum_{t=1}^{n} e_t^2$
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png )
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png)
 
 Long Short Term Memory(LSTM) had the lowest error for the baseline 1 month ahead prediction using previous 6 months of Portland housing price data. LSTM is a good model for time series data because it takes into account sequence dependence from the input variables. Also, observing the plot of the 6 month LSTM, the red prediction line smooths out the volatility and shows a good prediction of the real Portland median house sale price. 
 
