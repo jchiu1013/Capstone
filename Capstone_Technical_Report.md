@@ -72,12 +72,14 @@ San Francisco 6 month input data was used as a feature to predict the San Franci
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
 
 3. Increase inputs using 3, 6, 12, 18 months of data for prediction (Does more data improve the MSE?)
+The next iteration of the LSTM model used increments of 3, 6, 12 and 18 months of Portland median house sale price data to predict one month ahead. Observing the chart of the MSE. After observing the MSE using the incremental monthly input data, an additional step was taken using the autocorrelation plot to determine the relationship of past data had on the present price. 18 months of previous data was chosen using a threshold of correlation above 0.5. The prediction using 18 months of Portland median house sale price to predict one month ahead can be seen in the third graph. 
 
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE%20-%20Portland%20LSTM%201%203%206%2012%20month%20ahead%20prediction.jpg "SF LSTM 6 month")
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
-![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF_LSTM_6_month.jpeg "SF LSTM 6 month")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE%20-%20Portland%20LSTM%201%203%206%2012%20month%20ahead%20prediction.jpg "MSE - Portland LSTM 3 6 12 18 month 1 ahead prediction")
+### Autocorrelation of Portland Median Sales Price
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Autocorrelation%20Portland.jpeg "Autocorrelation")
+![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Portland%2018%20month%201%20ahead%20LSTM.jpeg "Portland LSTM 18 month 1 ahead")
 
-
+4. Check the limit of predictive capacity 1, 3, 6, 12 month look ahead (How far can the model accurately predict into the future?)
 
 
 
