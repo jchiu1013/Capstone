@@ -56,6 +56,8 @@ The baseline model used 6 months of Portland median housing price data to predic
 
 After optimizing the models the Mean Squared Error was used as a success metric to determine the best choice moving forward. Mean squared error is the sum of the squared difference between the actual portland house sale price minus the predicted Portland house sale price divided by the number of predictions. The square root of the mean squared error was taken to find the dollar difference between the predicted and real portland median house sale price. 
 
+http://adventuresinmachinelearning.com/keras-lstm-tutorial/
+
 MSE = $\frac{1}{n}\sum_{t=1}^{n} e_t^2$
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/MSE.png | height=24 width=48})
 
@@ -131,3 +133,4 @@ Model Results:
 [1]: https://www.zillow.com/research/data/
 [2]: https://fred.stlouisfed.org
 [3]: https://fred.stlouisfed.org/series/CPIAUCSL
+[4]http://adventuresinmachinelearning.com/keras-lstm-tutorial/
