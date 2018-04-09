@@ -15,16 +15,16 @@ The primary goal of this capstone project is to predict future home sales price 
 ### Exploratory Data Analysis: 
 The time series data was collected from 2 primary sources. The first is Zillow, a website for real estate information and the St. Louis Federal Reserve, a website that provides economic data. A point of interest to note is the downward trend in housing price from 2008 until mid 2011 - 2012. This recession is likely due to the financial crisis in 2008. Further observation into the federal funds rate reveals monetary policy that was taken, moving rates close to zero. The lowering of the fed funds rate was taken to stimulate the economy by decreasing the cost of borrowing. The subsequent increase in inflation beginning in 2009, paralleled the decrease in fed funds rate. Also, the decrease in unemployment rate has an observed lag effect decreasing from its peak in 2010. 
 
-Zillow[1]: 
-The Zillow data set will be focused primarily on Portland median sale price data from March 2008 to December 2017. There are 118 monthly observations available for analysis in that date range. The choice for portland was chosen primarily due to the continuous stream of monthly data available. I also chose San Francisco as a comparison point to show the capacity to extend the model to other cities. The San Francisco data was missing data for December 2017. 
+Zillow: 
+The Zillow data set will be focused primarily on Portland median sale price data from March 2008 to December 2017. There are 118 monthly observations available for analysis in that date range. The choice for portland was chosen primarily due to the continuous stream of monthly data available. I also chose San Francisco as a comparison point to show the capacity to extend the model to other cities. The San Francisco data was missing data for December 2017. [[1]]
 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Portland%20Median%20Sales%20Price.jpg "Portland Median Sales Price")
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/SF%20Median%20Sales%20Price.jpg "San Francisco Median Sales Price")
 
-St. Louis Federal Reserve[2]:
-The data from the St. Louis Federal Reserve website uses monthly data for consumer pricing index(CPI), unemployment rate, and federal funds rate from March 2008 to December 2017. 
+St. Louis Federal Reserve:
+The data from the St. Louis Federal Reserve website uses monthly data for consumer pricing index(CPI), unemployment rate, and federal funds rate from March 2008 to December 2017. [[2]]
 
-For reference, the Consumer Price Index for All Urban Consumers: All Items (CPIAUCSL) is a measure of the average monthly change in the price for goods and services paid by urban consumers between any two time periods[3]. The CPI is indexed from 1982-1984=100, Seasonally Adjusted. 
+For reference, the Consumer Price Index for All Urban Consumers: All Items (CPIAUCSL) is a measure of the average monthly change in the price for goods and services paid by urban consumers between any two time periods. The CPI is indexed from 1982-1984=100, Seasonally Adjusted. [[3]]
 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/CPI%20Rate.jpg "CPI Rate")
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Unemployment%20Rate.jpg "Unemployment Rate")
@@ -54,7 +54,7 @@ The baseline model used 6 months of Portland median housing price data to predic
 - Neural Network
 - Long Short Term Memory(LSTM) - Recurrent Neural Network(RNN)
 
-Keras LSTM Architecture[4]: Below is a sample image of the architecture for a LSTM recurrent neural network. A recurrent neural network is a neural network that attempts to model time or sequence dependent data such as time series data in stock price or natural language processing. At each time step of the network the previous data is fed into the next step to maintain memory of the information. This helps with the vanishing gradient problem in a normal neural network where past data moves asymptotically toward zero. This means weight in previous layers won't be changed significantly and the model will not learn long term dependencies. The LSTM model solves this problem and as a result is a good model for use with time series data. 
+Keras LSTM Architecture: Below is a sample image of the architecture for a LSTM recurrent neural network. A recurrent neural network is a neural network that attempts to model time or sequence dependent data such as time series data in stock price or natural language processing. At each time step of the network the previous data is fed into the next step to maintain memory of the information. This helps with the vanishing gradient problem in a normal neural network where past data moves asymptotically toward zero. This means weight in previous layers won't be changed significantly and the model will not learn long term dependencies. The LSTM model solves this problem and as a result is a good model for use with time series data. [[4]]
 
 ![alt text](https://github.com/jchiu1013/Housing_Capstone/blob/master/Images/Keras-LSTM-tutorial-architecture.png "LSTM Architecture") 
 
@@ -119,7 +119,7 @@ Model Results:
 - The more months of data provided help to improve the accuracy of the prediction, but this is limited by correlation of past prices to the present price.
 - Predicting more months ahead widens error, so it is important to be more discerning when using the model to predict further into the future.
 - Adding features helps to reduce error, but not significantly. 
-    - One topic that may be relevant to discuss is the efficient market hypothesis. Efficient market hypothesis is a theory in financial economics that states that asset prices fully reflect all available information.[5] In this case prices reflect a large amount of the information needed to accurately forecast the future median sale price of a house. There is minimal returns to adding more features. 
+    - One topic that may be relevant to discuss is the efficient market hypothesis. Efficient market hypothesis is a theory in financial economics that states that asset prices fully reflect all available information.[[5]] In this case prices reflect a large amount of the information needed to accurately forecast the future median sale price of a house. There is minimal returns to adding more features. 
 
 ### Application: 
 
