@@ -1,7 +1,5 @@
-# DSI Housing Capstone 
-# Predicting median home sales prices: 
-# Time series with LSTM recurrent neural network
-## By: James Chiu 
+# Predicting median home sales prices: Time series with LSTM recurrent neural network
+##  DSI Housing Capstone by: James Chiu 
 Capstone project predicts trends in USA housing markets using time series data to forecast future pricing. Machine learning models applied include linear regressions and long short term memory recurrent neural networks.
 
 ### Goals: 
