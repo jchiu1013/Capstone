@@ -1,6 +1,6 @@
-# Housing Capstone - Predicting trends in home sale prices
-## DSI Capstone: James Chiu 
-###Capstone project predicts trends in USA housing markets using time series data to forecast future pricing. Machine learning models applied include linear regressions and long short term memory recurrent neural networks.
+# DSI Housing Capstone - Predicting trends in home sale prices
+## James Chiu 
+### Capstone project predicts trends in USA housing markets using time series data to forecast future pricing. Machine learning models applied include linear regressions and long short term memory recurrent neural networks.
 
 ### Goals: 
 Whether you are a real estate investor, homeowner, renter or government, housing is a part of the economy that affects everybody. This project will focus on some of the foundational questions that come up when going about researching housing. 
